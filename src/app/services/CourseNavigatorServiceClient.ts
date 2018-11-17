@@ -21,5 +21,12 @@ export class CourseNavigatorServiceClient {
       .then(response => response.json());
   }
 
+  findWidgetsForTopic(topicId) {
+    return fetch
+    ('http://localhost:9090/api/topic/'
+      + topicId + '/widget')
+      .then(response => response.json());
+  }
+
 
 }

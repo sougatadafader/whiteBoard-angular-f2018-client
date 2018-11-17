@@ -26,12 +26,20 @@ export class CourseNavigatorComponent implements OnInit {
         this.lessons = lessons;
       });
   }
-  
+
   selectLesson(lessonId) {
     this.selectedLessonId = lessonId;
     this.service.findTopicsForLesson(lessonId)
       .then(topics => {
         this.topics = topics;
+      });
+  }
+
+  selectTopic(topicId) {
+    this.selectedTopicId = topicId;
+    this.service.findWidgetsForTopic(topicId)
+      .then(widgets => {
+        this.widgets = widgets;
       });
   }
 
