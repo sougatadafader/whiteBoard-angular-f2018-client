@@ -16,6 +16,8 @@ import { routing } from './app.routing';
 import { WhiteBoardComponent } from './white-board/white-board.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
+import {ModuleServiceClient} from "./services/ModuleServiceClient";
+import {LessonServiceClient} from "./services/LessonServiceClient";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
     AppRoutingModule
   ],
   providers: [
+    LessonServiceClient,
+    ModuleServiceClient,
     CourseServiceClient,
     CourseNavigatorServiceClient],
   bootstrap: [AppComponent]

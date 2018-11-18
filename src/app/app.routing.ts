@@ -12,7 +12,7 @@ const appRoutes: Routes = [
   {path: 'home', component: WhiteBoardComponent},
   { path: 'course', component: CourseGridComponent },
   { path: 'course/:courseId', component: CourseViewerComponent },
-  { path: 'course/:courseId/module', component: ModuleListComponent },
+  { path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent },
   { path: 'module/:moduleId/lesson', component: LessonTabsComponent },
   { path: 'lesson/:topicId/topic', component: TopicPillsComponent },
   { path: 'topic/:widgetId/widget', component: WidgetListComponent },
