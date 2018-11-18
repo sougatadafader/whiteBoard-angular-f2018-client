@@ -1,3 +1,15 @@
 <p>
-  course-grid works!
+  course-grid works!({{courses.length}})
 </p>
+<div class="row">
+  <div *ngFor="let course of courses" class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{course.title}}</h5>
+        <p class="card-text">Course Description</p>
+        <a routerLink="/course/{{course.id}}" class="btn btn-sm btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+
+</div>

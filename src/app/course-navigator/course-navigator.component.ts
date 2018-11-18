@@ -8,10 +8,15 @@ import {CourseNavigatorServiceClient} from "../services/CourseNavigatorServiceCl
 })
 export class CourseNavigatorComponent implements OnInit {
   courses = [];
-
+  modules = [];
+  lessons = [];
+  topics = [];
+  widgets = [];
   constructor(private service: CourseNavigatorServiceClient) { }
   selectedCourseId = 0;
   selectedModuleId = 0;
+  selectedLessonId = 0;
+  selectedTopicId = 0;
   selectCourse(courseId) {
     this.selectedCourseId = courseId;
     this.service.findModulesForCourse(courseId)
