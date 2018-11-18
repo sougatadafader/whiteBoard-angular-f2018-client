@@ -13,6 +13,7 @@ const appRoutes: Routes = [
   { path: 'course', component: CourseGridComponent },
   { path: 'course/:courseId', component: CourseViewerComponent },
   { path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent },
+  { path: 'course/:courseId/module/:moduleId/lesson/:lessonId', component: CourseViewerComponent },
   { path: 'module/:moduleId/lesson', component: LessonTabsComponent },
   { path: 'lesson/:topicId/topic', component: TopicPillsComponent },
   { path: 'topic/:widgetId/widget', component: WidgetListComponent },

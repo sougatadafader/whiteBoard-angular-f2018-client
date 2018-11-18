@@ -10,10 +10,19 @@ import {LessonServiceClient} from "../services/LessonServiceClient";
 export class LessonTabsComponent implements OnInit {
 
   constructor(private myservice:LessonServiceClient, private route:ActivatedRoute) {
-    this.route.params.subscribe(params=>this.loadLesson(params['moduleId']))
+    this.route.params.subscribe(params => this.setParams(params));
   }
+  courseId;
   moduleId;
+  lessonId;
   lessons = [];
+  setParams(params)
+  {
+    this.courseId = params['courseId'];
+    this.moduleId = params['moduleId'];
+    this.lessonId = params['lessonId'];
+    this.loadLesson(this.moduleId)
+  }
   loadLesson(moduleId)
   {
     this.moduleId =moduleId;
