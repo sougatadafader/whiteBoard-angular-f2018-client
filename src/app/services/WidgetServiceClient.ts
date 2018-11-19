@@ -1,6 +1,6 @@
 export class WidgetServiceClient{
-  TOPIC_URL = 'http://localhost:9090/api/topic/TOPIC_ID/widget'
-  TOPIC_URL_ID = 'http://localhost:9090/api/topic/TOPIC_ID/widget'
+  TOPIC_URL = ' https://guarded-depths-89666.herokuapp.com/api/topic/TOPIC_ID/widget'
+  TOPIC_URL_ID = ' https://guarded-depths-89666.herokuapp.com/api/topic/TOPIC_ID/widget'
   findWidgetsForTopic(topicId)
   {
     return fetch(this.TOPIC_URL.replace('TOPIC_ID', topicId))
@@ -8,7 +8,7 @@ export class WidgetServiceClient{
   }
   findAllWidgets()
   {
-    return fetch('http://localhost:9090/api/widgets')
+    return fetch(' https://guarded-depths-89666.herokuapp.com/api/widgets')
       .then(response => response.json());
   }
   findWidgetsById(wid)

@@ -1,6 +1,6 @@
 export class ModuleServiceClient{
-  MODULE_URL = 'http://localhost:9090/api/course/COURSE_ID/module'
-  MODULE_URL_ID = 'http://localhost:9090/api/module/MODULE_ID'
+  MODULE_URL = ' https://guarded-depths-89666.herokuapp.com/api/course/COURSE_ID/module'
+  MODULE_URL_ID = ' https://guarded-depths-89666.herokuapp.com/api/module/MODULE_ID'
   findModulesForCourse(courseId)
   {
     return fetch(this.MODULE_URL.replace('COURSE_ID', courseId))
@@ -8,7 +8,7 @@ export class ModuleServiceClient{
   }
   findAllModules()
   {
-    return fetch('http://localhost:9090/api/modules')
+    return fetch(' https://guarded-depths-89666.herokuapp.com/api/modules')
       .then(response => response.json());
   }
   findModuleById(moduleId)

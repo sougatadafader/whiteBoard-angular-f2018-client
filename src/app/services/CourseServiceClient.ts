@@ -1,5 +1,5 @@
 export class CourseServiceClient{
-  Course_url = 'http://localhost:9090/api/course';
+  Course_url = ' https://guarded-depths-89666.herokuapp.com/api/course';
   findAllCourses() {
     return fetch(this.Course_url+'s')
       .then(response => response.json());
