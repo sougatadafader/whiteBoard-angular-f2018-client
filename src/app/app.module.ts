@@ -19,6 +19,7 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import {ModuleServiceClient} from "./services/ModuleServiceClient";
 import {LessonServiceClient} from "./services/LessonServiceClient";
 import {TopicServiceClient} from "./services/TopicServiceClient";
+import {WidgetServiceClient} from "./services/WidgetServiceClient";
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import {TopicServiceClient} from "./services/TopicServiceClient";
     AppRoutingModule
   ],
   providers: [
+    WidgetServiceClient,
     TopicServiceClient,
     LessonServiceClient,
     ModuleServiceClient,

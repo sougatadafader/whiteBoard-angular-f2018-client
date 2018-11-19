@@ -21,6 +21,7 @@ export class TopicPillsComponent implements OnInit {
   topics = [];
   setParams(params)
   {
+    console.log(params)
     this.courseId = params['courseId'];
     this.moduleId = params['moduleId'];
     this.lessonId = params['lessonId'];
