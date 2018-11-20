@@ -1,5 +1,5 @@
 {
-  "name": "angular-fall-f18",
+  "name": "whiteBoard-angular-f2018-client",
   "version": "0.0.0",
   "scripts": {
     "postinstall": "ng build --aot --prod",
